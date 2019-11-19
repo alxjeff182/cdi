@@ -32,6 +32,15 @@ Vue.component(
 
 Vue.component("main-content", require("./components/MainContent.vue").default);
 Vue.component("login", require("./components/Login.vue").default);
+Vue.component("user-profile", require("./components/UserProfile.vue").default);
+Vue.component(
+    "broadcast-message",
+    require("./components/BroadcastMessage.vue").default
+);
+Vue.component(
+    "footer-setting",
+    require("./components/FooterSetting.vue").default
+);
 
 const app = new Vue({
     el: "#app"

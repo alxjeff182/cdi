@@ -11125,3 +11125,135 @@ a.text-dark:focus {
   margin-bottom: 10rem !important;
 }
 
+.border-btm {
+  border-bottom: 2.5px solid #31c5f1;
+}
+
+.card-bg {
+  background: transparent;
+  border: 1px solid #31c5f1;
+  border-radius: 5px;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+
+/* The button-maker */
+
+.btn-left {
+  background: none;
+  border: 0;
+  font-size: 22px;
+  line-height: 2em;
+  position: relative;
+  width: 12em;
+  height: 2em;
+}
+
+.btn-left a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-left::before,
+.btn-left::after {
+  background: #3490dc;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  height: 1em;
+}
+
+.btn-left::before {
+  box-shadow: -1px 1px 0 #1467ba, -2px 2px 0 #1467ba, -3px 3px 0 #1467ba, -4px 4px 0 #1467ba;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  bottom: 0;
+  z-index: 1;
+}
+
+.btn-left::after {
+  box-shadow: 1px 1px 0 #1467ba, 2px 2px 0 #1467ba, 3px 3px 0 #1467ba, 4px 4px 0 #1467ba;
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  top: 0;
+}
+
+.btn-left:hover::before,
+.btn-left:hover::after {
+  background: #75b4e7;
+}
+
+.btn-left:focus {
+  outline: 0;
+}
+
+.btn-left:focus::before,
+.btn-left:focus::after {
+  background: #75b4e7;
+}
+
+@-webkit-keyframes zoom {
+  25% {
+    -webkit-transform: scale3d(1.5, 1.5, 0);
+            transform: scale3d(1.5, 1.5, 0);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 0);
+            transform: scale3d(1, 1, 0);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.25, 1.25, 0);
+            transform: scale3d(1.25, 1.25, 0);
+  }
+}
+
+@keyframes zoom {
+  25% {
+    -webkit-transform: scale3d(1.5, 1.5, 0);
+            transform: scale3d(1.5, 1.5, 0);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 0);
+            transform: scale3d(1, 1, 0);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.25, 1.25, 0);
+            transform: scale3d(1.25, 1.25, 0);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* Page styling */
+.noscroll { 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+.mb-20 {
+    margin-bottom: 12rem !important;
+}

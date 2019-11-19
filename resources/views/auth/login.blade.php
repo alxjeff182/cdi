@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>CDI Facility Service</title>
-
-        <!-- Fonts -->
-        <link href="css/app.css" rel="stylesheet">
-
-    </head>
-    <body>
-        <div class="body-container"> 
+@extends('main')
+@section('title', 'Login')
+@section('classBody', 'class=noscroll')
+    @section('content')
 <div class="container my-10">
     <div class="row justify-content-center">
-        <div class="col-sm-12 text-center mt-5">
+        <div class="col-sm-12 text-center">
             <p><img class="w-50" src="img/splash-screen.png" /></p>
             <p class="text-white font-weight-bold mt-4"> Silahkan log in</p>
         </div>
@@ -76,7 +66,12 @@
                                         {{ __('Lupa Password ?') }}
                                     </a>
                                 @endif
-                                </div>
+                                                                @if (Route::has('register'))
+                                    <a class="btn btn-link text-white font-weight-bold float-right" href="{{ route('register') }}">
+                                        {{ __('Pengguna baru ?') }}
+                                    </a>
+                                @endif 
+                                </div>  
                                 </div>
                             </div>
                         </div>
@@ -84,7 +79,5 @@
                 </div>
             </div>
         </div>
-    </div> 
-        <script src="js/app.js"></script>
-    </body>
-</html>
+    </div>  
+@endsection

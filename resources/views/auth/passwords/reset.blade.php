@@ -1,6 +1,6 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('main')
+@section('title', 'Reset Password')
+    @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -61,5 +61,5 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div>	 
+@endsection 

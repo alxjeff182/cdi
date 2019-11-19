@@ -1,13 +1,10 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
+@extends('main')
+@section('title', 'Register')
+@section('classBody', 'class=noscroll')
+    @section('content') 
+<div class="container" style="margin-bottom:12rem">
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-8">  
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -96,10 +93,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </form> 
     </div>
-</div>
-@endsection
+</div>	 
+@endsection  
