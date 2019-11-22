@@ -1,17 +1,5 @@
-@extends('main')
-@section('title', 'Welcome')
-    @section('content')
-     <div id="app">   
-          <user-profile></user-profile> 
-      <div class="container mb-5 px-2">
-         {{-- <admin-content></admin-content> --}}
-         {{-- <admin-edit-message></admin-edit-message> --}}
-         {{-- <admin-edit-invoice></admin-edit-invoice> --}}
-         {{-- <main-content></main-content> --}}
-         {{-- <location-select></location-select> --}}
-         {{-- <report-task></report-task> --}}
-         {{-- <upload-task></upload-task> --}}
-           <div class="col-12 mt-5">
+<template>
+  <div class="col-12 mt-5">
     <div class="card card-bg">
       <div class="card-body">
         <div class="row">
@@ -57,8 +45,4 @@
       </div>
     </div>
   </div>
-         <broadcast-message></broadcast-message>
-         <footer-setting></footer-setting>
-    </div>	 
-    </div>	 
-@endsection
+</template>

@@ -6,7 +6,41 @@
 
 require("./bootstrap");
 
+import Vue from "vue";
+import VueRouter from "vue-router";
+import CircleMenu from "vue-circle-menu";
+
 window.Vue = require("vue");
+
+Vue.use(VueRouter);
+const Location = () => import("./components/LocationSelect.vue");
+const Job = () => import("./components/UploadTask.vue");
+const Report = () => import("./components/ReportTask.vue");
+const Message = () => import("./components/UserProfile.vue");
+const UserMenu = () => import("./components/MainContent.vue");
+const router = new VueRouter({
+    routes: [
+        {
+            path: "/home/:id",
+            component: UserMenu,
+            children: [
+                // UserHome will be rendered inside User's <router-view>
+                // when /user/:id is matched,
+
+                { path: "/location", component: Location },
+
+                // UserProfile will be rendered inside User's <router-view>
+                // when /user/:id/profile is matched
+                { path: "/job", component: Job },
+
+                // UserPosts will be rendered inside User's <router-view>
+                // when /user/:id/posts is matched
+                { path: "/message", component: Message },
+                { path: "/report", component: Report }
+            ]
+        }
+    ]
+});
 
 /**
  * The following block of code may be used to automatically register your
@@ -31,7 +65,6 @@ Vue.component(
 );
 
 Vue.component("main-content", require("./components/MainContent.vue").default);
-Vue.component("login", require("./components/Login.vue").default);
 Vue.component("user-profile", require("./components/UserProfile.vue").default);
 Vue.component(
     "broadcast-message",
@@ -41,7 +74,29 @@ Vue.component(
     "footer-setting",
     require("./components/FooterSetting.vue").default
 );
+Vue.component(
+    "location-select",
+    require("./components/LocationSelect.vue").default
+);
+Vue.component("report-task", require("./components/ReportTask.vue").default);
+Vue.component("upload-task", require("./components/UploadTask.vue").default);
 
+Vue.component(
+    "admin-content",
+    require("./components/AdminContent.vue").default
+);
+Vue.component("admin-edit", require("./components/AdminEdit.vue").default);
+Vue.component(
+    "admin-edit-invoice",
+    require("./components/AdminEditInvoice.vue").default
+);
+Vue.component(
+    "admin-edit-message",
+    require("./components/AdminEditMessage.vue").default
+);
+Vue.component("user-home", require("./components/UserHome.vue").default);
+Vue.component("circle-menu", CircleMenu);
 const app = new Vue({
-    el: "#app"
+    el: "#app",
+    router
 });

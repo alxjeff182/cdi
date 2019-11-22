@@ -20,3 +20,4 @@ Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');

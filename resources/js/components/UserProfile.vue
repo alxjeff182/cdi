@@ -1,12 +1,12 @@
 <template>
-  <div class="container py-2 border-btm">
+  <div class="container border-btm py-2">
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-5">
         <img class="w-100" src="img/splash-screen.png" />
       </div>
       <div class="col-7">
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-6 text-right p-0">
+          <div class="col-6 text-right p-0 f-12">
             <p class="m-0 font-weight-bold">Hi Budi</p>
             <p class="font-weight-bold">Good to see you</p>
             <p class="m-0 font-weight-bold">

@@ -11100,6 +11100,17 @@ a.text-dark:focus {
   }
 }
 
+.input-sm {
+  height: 30px;
+  line-height: 30px;
+  padding: 0px;
+  padding-left: 0.5rem;
+}
+
+.b-none {
+  border: none;
+}
+
 .body-container {
   background: linear-gradient(-120deg, #021b79, #0575e6, #205e9b);
   max-width: 480px;
@@ -11118,6 +11129,10 @@ a.text-dark:focus {
 
 .mb-10 {
   margin-bottom: 6rem !important;
+}
+
+.mb-20 {
+  margin-bottom: 12rem !important;
 }
 
 .my-10 {
@@ -11249,11 +11264,10 @@ a.text-dark:focus {
   }
 }
 
+.noscroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 /* Page styling */
-.noscroll { 
-    overflow-x: hidden; 
-    overflow-y: hidden;
-}
-.mb-20 {
-    margin-bottom: 12rem !important;
-}
+
