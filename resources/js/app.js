@@ -8,40 +8,47 @@ require("./bootstrap");
 
 import Vue from "vue";
 import VueRouter from "vue-router";
-import CircleMenu from "vue-circle-menu";
+import Gate from "./Gate";
 
+import { RadialMenu, RadialMenuItem } from "vue-radial-menu";
 window.Vue = require("vue");
 
+Vue.prototype.$gate = new Gate(window.user);
 Vue.use(VueRouter);
 const Location = () => import("./components/LocationSelect.vue");
 const Job = () => import("./components/UploadTask.vue");
 const Report = () => import("./components/ReportTask.vue");
-const Message = () => import("./components/UserProfile.vue");
-const UserMenu = () => import("./components/MainContent.vue");
+const Message = () => import("./components/AdminEditMessage.vue");
+const MainContent = () => import("./components/MainContent.vue");
+const RoleManagement = () => import("./components/RoleManagement.vue");
+
+const AdminUser = () => import("./components/AdminEdit.vue");
+const AdminInvoce = () => import("./components/AdminEditInvoice.vue");
+const ReportTask = () => import("./components/ReportTask.vue");
+let routes = [
+    {
+        path: "/dashboard/:id",
+        component: MainContent,
+        children: [
+            { path: "/dashboard", component: RoleManagement },
+            { path: "/dashboard/location", component: Location },
+            { path: "/dashboard/job", component: Job },
+            { path: "/dashboard/message", component: Message },
+            { path: "/dashboard/report", component: Report },
+
+            { path: "/dashboard/manage-user", component: AdminUser },
+            { path: "/dashboard/manage-location", component: Location },
+            { path: "/dashboard/manage-invoice", component: AdminInvoce },
+            { path: "/dashboard/admin-message", component: Message },
+            { path: "/dashboard/manage-task", component: ReportTask }
+        ]
+    }
+];
+
 const router = new VueRouter({
-    routes: [
-        {
-            path: "/home/:id",
-            component: UserMenu,
-            children: [
-                // UserHome will be rendered inside User's <router-view>
-                // when /user/:id is matched,
-
-                { path: "/location", component: Location },
-
-                // UserProfile will be rendered inside User's <router-view>
-                // when /user/:id/profile is matched
-                { path: "/job", component: Job },
-
-                // UserPosts will be rendered inside User's <router-view>
-                // when /user/:id/posts is matched
-                { path: "/message", component: Message },
-                { path: "/report", component: Report }
-            ]
-        }
-    ]
+    mode: "history",
+    routes
 });
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -80,11 +87,6 @@ Vue.component(
 );
 Vue.component("report-task", require("./components/ReportTask.vue").default);
 Vue.component("upload-task", require("./components/UploadTask.vue").default);
-
-Vue.component(
-    "admin-content",
-    require("./components/AdminContent.vue").default
-);
 Vue.component("admin-edit", require("./components/AdminEdit.vue").default);
 Vue.component(
     "admin-edit-invoice",
@@ -94,8 +96,20 @@ Vue.component(
     "admin-edit-message",
     require("./components/AdminEditMessage.vue").default
 );
-Vue.component("user-home", require("./components/UserHome.vue").default);
-Vue.component("circle-menu", CircleMenu);
+Vue.component(
+    "admin-content",
+    require("./components/AdminContent.vue").default
+);
+Vue.component(
+    "cleaner-content",
+    require("./components/CleanerContent.vue").default
+);
+Vue.component(
+    "customer-content",
+    require("./components/CustomerContent.vue").default
+);
+Vue.component("RadialMenu", RadialMenu);
+Vue.component("RadialMenuItem", RadialMenuItem);
 const app = new Vue({
     el: "#app",
     router
