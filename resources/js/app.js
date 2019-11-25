@@ -7,14 +7,47 @@
 require("./bootstrap");
 
 import Vue from "vue";
+import moment from "moment";
+import localization from "moment/locale/id";
+import VueProgressBar from "vue-progressbar";
+import Swal from "sweetalert2";
+import { Form, HasError, AlertError } from "vform";
 import VueRouter from "vue-router";
 import Gate from "./Gate";
 
 import { RadialMenu, RadialMenuItem } from "vue-radial-menu";
-window.Vue = require("vue");
 
+const toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000
+});
+window.Swal = Swal;
+window.toast = toast;
+
+window.Form = Form;
+Vue.component(HasError.name, HasError);
+Vue.component(AlertError.name, AlertError);
+
+window.Vue = require("vue");
 Vue.prototype.$gate = new Gate(window.user);
 Vue.use(VueRouter);
+
+Vue.filter("upText", function(uppercase) {
+    return uppercase.charAt(0).toUpperCase() + uppercase.slice(1);
+});
+Vue.filter("gameDate", function(created) {
+    return moment(created).format("llll");
+});
+
+Vue.use(VueProgressBar, {
+    color: "rgb(143, 255, 199)",
+    failedColor: "red",
+    height: "2px"
+});
+
+window.Reload = new Vue();
 const Location = () => import("./components/LocationSelect.vue");
 const Job = () => import("./components/UploadTask.vue");
 const Report = () => import("./components/ReportTask.vue");
@@ -133,5 +166,13 @@ Vue.component("RadialMenu", RadialMenu);
 Vue.component("RadialMenuItem", RadialMenuItem);
 const app = new Vue({
     el: "#app",
-    router
+    router,
+    data: {
+        search: ""
+    },
+    methods: {
+        searchit: _.debounce(() => {
+            Reload.$emit("searching");
+        }, 1000)
+    }
 });

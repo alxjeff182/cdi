@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdminEditTask.vue?vue&type=template&id=ed17f07a&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AdminEditTask.vue?vue&type=template&id=ed17f07a& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdminEditLocation.vue?vue&type=template&id=ba81521a&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AdminEditLocation.vue?vue&type=template&id=ba81521a& ***!
+  \********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27,7 +27,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "row text-right" }, [
           _c("div", { staticClass: "col-12" }, [
             _c("h5", { staticClass: "text-center font-weight-bold mb-3" }, [
-              _vm._v("Manage Task")
+              _vm._v("Manage Location")
             ])
           ]),
           _vm._v(" "),
@@ -91,7 +91,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-9" }, [
             _c("input", {
               staticClass: "form-control input-sm",
-              attrs: { type: "text", placeholder: "Cari task" }
+              attrs: { type: "text", placeholder: "Cari location" }
             })
           ])
         ])
@@ -263,16 +263,16 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/components/AdminEditTask.vue":
-/*!***************************************************!*\
-  !*** ./resources/js/components/AdminEditTask.vue ***!
-  \***************************************************/
+/***/ "./resources/js/components/AdminEditLocation.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/AdminEditLocation.vue ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _AdminEditTask_vue_vue_type_template_id_ed17f07a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AdminEditTask.vue?vue&type=template&id=ed17f07a& */ "./resources/js/components/AdminEditTask.vue?vue&type=template&id=ed17f07a&");
+/* harmony import */ var _AdminEditLocation_vue_vue_type_template_id_ba81521a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AdminEditLocation.vue?vue&type=template&id=ba81521a& */ "./resources/js/components/AdminEditLocation.vue?vue&type=template&id=ba81521a&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 var script = {}
@@ -282,8 +282,8 @@ var script = {}
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
   script,
-  _AdminEditTask_vue_vue_type_template_id_ed17f07a___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _AdminEditTask_vue_vue_type_template_id_ed17f07a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _AdminEditLocation_vue_vue_type_template_id_ba81521a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AdminEditLocation_vue_vue_type_template_id_ba81521a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -293,24 +293,24 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/AdminEditTask.vue"
+component.options.__file = "resources/js/components/AdminEditLocation.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/AdminEditTask.vue?vue&type=template&id=ed17f07a&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/components/AdminEditTask.vue?vue&type=template&id=ed17f07a& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/components/AdminEditLocation.vue?vue&type=template&id=ba81521a&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/AdminEditLocation.vue?vue&type=template&id=ba81521a& ***!
+  \**************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminEditTask_vue_vue_type_template_id_ed17f07a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AdminEditTask.vue?vue&type=template&id=ed17f07a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdminEditTask.vue?vue&type=template&id=ed17f07a&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminEditTask_vue_vue_type_template_id_ed17f07a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminEditLocation_vue_vue_type_template_id_ba81521a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AdminEditLocation.vue?vue&type=template&id=ba81521a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdminEditLocation.vue?vue&type=template&id=ba81521a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminEditLocation_vue_vue_type_template_id_ba81521a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminEditTask_vue_vue_type_template_id_ed17f07a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminEditLocation_vue_vue_type_template_id_ba81521a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

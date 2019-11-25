@@ -14,7 +14,7 @@
             </p>
           </div>
           <div class="col-6">
-            <img class="w-100 d-block" :src="'/img/'+user.profilePicture" />
+            <img class="w-100 d-block" :src="'/img/profile/'+user.profilePicture" />
           </div>
         </div>
       </div>
