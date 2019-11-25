@@ -22,9 +22,18 @@ const Message = () => import("./components/AdminEditMessage.vue");
 const MainContent = () => import("./components/MainContent.vue");
 const RoleManagement = () => import("./components/RoleManagement.vue");
 
-const AdminUser = () => import("./components/AdminEdit.vue");
-const AdminInvoce = () => import("./components/AdminEditInvoice.vue");
-const ReportTask = () => import("./components/ReportTask.vue");
+const AdminUser = () => import("./components/AdminEditUser.vue");
+const AdminInvoice = () => import("./components/AdminEditInvoice.vue");
+const AdminTask = () => import("./components/AdminEditTask.vue");
+const AdminLocation = () => import("./components/AdminEditLocation.vue");
+const AdminMessage = () => import("./components/AdminEditMessage.vue");
+const AdminAssignment = () => import("./components/AdminEditAssignment.vue");
+
+const CustomerLocation = () => import("./components/CustomerLocation.vue");
+const CustomerTask = () => import("./components/CustomerTask.vue");
+const CustomerReport = () => import("./components/CustomerReport.vue");
+const CustomerInvoice = () => import("./components/CustomerInvoice.vue");
+const CustomerMessage = () => import("./components/CustomerMessage.vue");
 let routes = [
     {
         path: "/dashboard/:id",
@@ -37,10 +46,23 @@ let routes = [
             { path: "/dashboard/report", component: Report },
 
             { path: "/dashboard/manage-user", component: AdminUser },
-            { path: "/dashboard/manage-location", component: Location },
-            { path: "/dashboard/manage-invoice", component: AdminInvoce },
-            { path: "/dashboard/admin-message", component: Message },
-            { path: "/dashboard/manage-task", component: ReportTask }
+            { path: "/dashboard/manage-location", component: AdminLocation },
+            { path: "/dashboard/manage-invoice", component: AdminInvoice },
+            { path: "/dashboard/manage-message", component: AdminMessage },
+            { path: "/dashboard/manage-task", component: AdminTask },
+            {
+                path: "/dashboard/manage-assignment",
+                component: AdminAssignment
+            },
+
+            {
+                path: "/dashboard/customer-location",
+                component: CustomerLocation
+            },
+            { path: "/dashboard/customer-task", component: CustomerTask },
+            { path: "/dashboard/customer-report", component: CustomerReport },
+            { path: "/dashboard/customer-invoice", component: CustomerInvoice },
+            { path: "/dashboard/customer-message", component: CustomerMessage }
         ]
     }
 ];
@@ -87,7 +109,6 @@ Vue.component(
 );
 Vue.component("report-task", require("./components/ReportTask.vue").default);
 Vue.component("upload-task", require("./components/UploadTask.vue").default);
-Vue.component("admin-edit", require("./components/AdminEdit.vue").default);
 Vue.component(
     "admin-edit-invoice",
     require("./components/AdminEditInvoice.vue").default

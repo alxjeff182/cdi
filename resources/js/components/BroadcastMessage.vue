@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row" v-if="this.$route.path == '/dashboard'">
     <div class="col-12 text-right font-weight-bold f-12 py-2">Selasa, 19/11/2019</div>
     <div class="col-2"></div>
     <div class="col-10">

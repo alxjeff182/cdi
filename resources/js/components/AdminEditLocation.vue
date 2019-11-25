@@ -3,7 +3,7 @@
     <div class="col-12 py-3 px-0">
       <div class="row text-right">
         <div class="col-12">
-          <h5 class="text-center font-weight-bold mb-3">Manage Invoice</h5>
+          <h5 class="text-center font-weight-bold mb-3">Manage Location</h5>
         </div>
         <div class="col-3"></div>
         <div class="col-9">
@@ -35,7 +35,7 @@
           >add new</button>
         </div>
         <div class="col-9">
-          <input type="text" placeholder="Cari invoice" class="form-control input-sm" />
+          <input type="text" placeholder="Cari location" class="form-control input-sm" />
         </div>
       </div>
     </div>

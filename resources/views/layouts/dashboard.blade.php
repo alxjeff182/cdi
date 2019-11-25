@@ -4,7 +4,7 @@
      <div id="app">   
         <user-profile></user-profile>  
         <div class="container mb-5 px-2"> 
-              <div class="col-12 mt-5"> 
+              <div class="col-12 mt-3"> 
                 <main-content></main-content> 
                 <broadcast-message></broadcast-message>
                 <footer-setting></footer-setting> 

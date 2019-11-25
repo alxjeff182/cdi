@@ -1,8 +1,10 @@
 <template>
   <div>
     <div class="col-12 py-3 px-0">
+      <h5 class="text-center font-weight-bold mb-3">Pesan Personal & Broadcast</h5>
+    </div>
+    <div class="col-12 px-0">
       <div class="card-body">
-        <h5 class="text-center font-weight-bold mb-3">Pesan Personal & Broadcast</h5>
         <div class="row">
           <div class="col-4">Jenis Pesan</div>
           <div class="col-8">

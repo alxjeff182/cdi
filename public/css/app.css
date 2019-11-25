@@ -1,5 +1,45 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.text-blue {
+  color: #3490dc;
+}
+
+.text-indigo {
+  color: #6574cd;
+}
+
+.text-purple {
+  color: #9561e2;
+}
+
+.text-pink {
+  color: #f66d9b;
+}
+
+.text-red {
+  color: #e3342f;
+}
+
+.text-orange {
+  color: #f6993f;
+}
+
+.text-yellow {
+  color: #ffed4a;
+}
+
+.text-green {
+  color: #38c172;
+}
+
+.text-teal {
+  color: #4dc0b5;
+}
+
+.text-cyan {
+  color: #6cb2eb;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -16989,7 +17029,8 @@ readers do not read off random characters that represent icons */
 .body-container {
   background: linear-gradient(-120deg, #021b79, #0575e6, #205e9b);
   max-width: 480px;
-  height: 100%;
+  min-height: 100vh;
+  max-height: 100%;
   left: calc(-50vw + 50%);
   right: calc(-50vw + 50%);
   margin-left: auto;
@@ -17145,4 +17186,13 @@ readers do not read off random characters that represent icons */
 }
 
 /* Page styling */
+
+.border-white {
+  border: 1px solid #fff;
+}
+
+.vue-radial-menu-item {
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+  border: 1.5px solid #2196f3;
+}
 
